@@ -8,6 +8,7 @@ import HighchartsReact from "highcharts-react-official";
 const Dashboard = () => {
   const [message, setMessage] = useState("");
   const [responseData, setResponseData] = useState({});
+  const [chartData, setChartData] = useState([]);
 
   const options = {
     chart: {
@@ -17,7 +18,8 @@ const Dashboard = () => {
       text: "",
     },
     xAxis: {
-      categories: ["STR", "FIN", "QLT", "MAN", "STO", "HR"],
+      // categories: ["STR", "FIN", "QLT", "MAN", "STO", "HR"],
+      categories:chartData.categories,
       crosshair: true,
       accessibility: {
         description: "Countries",
@@ -43,21 +45,12 @@ const Dashboard = () => {
       headerFormat: "<b>{point.x}</b><br/>",
       pointFormat: "{series.name}: {point.y}<br/>",
     },
-
-    series: [
-      {
-        name: "Total",
-        data: [19, 7, 9, 15, 5, 10],
-      },
-      {
-        name: "Closed",
-        data: [14, 6, 8, 15, 5, 9],
-      },
-    ],
+    series: chartData.series,
+    
   };
 
   useEffect(() => {
-    const fetchProtectedData = async () => {
+    const fetchDashboardCountData = async () => {
       try {
         const token = localStorage.getItem("token");
 
@@ -76,9 +69,31 @@ const Dashboard = () => {
       }
     };
 
-    fetchProtectedData();
-  }, [responseData]);
+    fetchDashboardCountData();
+  }, []);
 
+  useEffect(() => {
+    const fetchChartData = async () => {
+      try {
+        const token = localStorage.getItem("token");
+
+        const response = await axios.get(
+          "http://localhost:5004/api/projects/getChartData",
+          {
+            headers: { authorization: token },
+          }
+        );
+        console.log(response);
+
+        setChartData(response.data);
+        // setMessage(response.data.message);
+      } catch (error) {
+        setMessage("Access denied. Please log in.");
+      }
+    };
+
+    fetchChartData();
+  }, []);
 
   return (
     <>

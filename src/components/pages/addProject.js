@@ -224,6 +224,7 @@ const AddProject = () => {
                 <option value="Quality">Quality</option>
                 <option value="Maintenance">Maintenance</option>
                 <option value="Stores">Stores</option>
+                <option value="Stores">HR</option>
               </select>
             </div>
           </div>

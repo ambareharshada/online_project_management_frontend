@@ -15,12 +15,8 @@ const ProjectList = () => {
           headers: { authorization: token },
         }
       );
-      console.log(response);
-
       setResponseData(response.data);
-      // setMessage(response.data.message);
     } catch (error) {
-      // setMessage("Access denied. Please log in.");
     }
   });
 
@@ -48,7 +44,6 @@ const ProjectList = () => {
         status: changeStatus,
         _id: value._id,
       };
-// console.log(payload,"payload...");
 
       const response = await axios.put(
         "http://localhost:5004/api/projectStatusChange",
@@ -60,9 +55,7 @@ const ProjectList = () => {
       console.log(response);
       fetchProtectedData.current();
     } catch (error) {
-        console.log(error);
-        
-      // setMessage("Access denied. Please log in.");
+      console.log(error);
     }
   };
   const columns = React.useMemo(
