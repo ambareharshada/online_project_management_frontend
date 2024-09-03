@@ -1,0 +1,419 @@
+/* login CSS */
+/* .label{
+    text-align: left !important;
+    font-weight: 300;
+    font-size: 15px;
+}
+.heading-login{
+    font-weight: 400;
+    padding: 2rem;
+}
+.forgot-password{
+    font-family: "Nunito Sans";
+    text-align: "right";
+    font-size: 12px;
+}
+.login-to-get-started-copy {
+    height: 27px;
+    width: 180px;
+    color: #3F3F3F;
+    font-family: "Nunito Sans";
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 27px;
+
+  }
+  .rectangle {
+    height: 36px;
+    width: 169px;
+    border-radius: 18px;
+    background-color: #035FB2;
+    color: #FFFFFF;
+    font-family: "Nunito Sans";
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 22px;
+    border: none;
+  }
+  .login {
+    text-align: center;
+  }
+  .message{
+    color:#FF3838;
+    text-align:center;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 19px;
+  }
+  .error-message{
+    color:#FF3838;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 19px;
+  }
+  .login-box{
+    height: 422px;
+    width: 410px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 7px 18px 0 rgba(2,118,179,0.13);
+  } */
+/* General Styles */
+.label {
+  text-align: left !important;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.heading-login {
+  font-weight: 400;
+  padding: 2rem;
+}
+
+.forgot-password {
+  font-family: "Nunito Sans";
+  text-align: right;
+  font-size: 12px;
+}
+
+.login-to-get-started-copy {
+  color: #3F3F3F;
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.rectangle {
+  height: 36px;
+  width: 100%;
+  border-radius: 18px;
+  background-color: #035FB2;
+  color: #FFFFFF;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+}
+
+.login {
+  text-align: center;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.message {
+  color: #FF3838;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.error-message {
+  color: #FF3838;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  line-height: 19px;
+}
+
+/* Card and Container Styles */
+.login-box {
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0 7px 18px 0 rgba(2, 118, 179, 0.13);
+  padding: 20px;
+  width: 100%;
+  max-width: 410px;
+  margin: 0 auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .container-add-project{
+    height: auto;
+    width: auto;
+  }
+  .container-add-project .form-control{
+    width: 350px;
+  }
+  .card{
+    background-color: transparent;
+    border: none;
+  }
+  .card-body{
+    padding: 0;
+  }
+  .login-box {
+      box-shadow: none;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+  }
+
+  .login-to-get-started-copy {
+      font-size: 28px;
+      float: left;
+      display: contents;
+      color: #3F3F3F;
+      font-family: "Nunito Sans";
+      letter-spacing: 0;
+      line-height: 27px;
+  }
+
+  .forgot-password {
+      font-size: 10px;
+  }
+
+  .rectangle {
+      font-size: 14px;
+  }
+
+  .message, .error-message {
+      font-size: 12px;
+  }
+
+  .form-group {
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .save-project{
+    position: fixed;
+    bottom: 70px;
+    margin-left: 20px;
+  }
+  .container-add-project{
+    height: auto !important;
+    width: auto !important;
+  }
+  .container-add-project .form-control{
+    width: 350px;
+  }
+  .card{
+    background-color: transparent;
+    border: none !important;
+  }
+ .login{
+    width: auto;
+    
+}
+  .login-box {
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.login-to-get-started-copy {
+    font-size: 28px;
+    color: #3F3F3F;
+  font-family: "Nunito Sans";
+  /* font-size: 20px; */
+  letter-spacing: 0;
+  line-height: 27px;
+  display: contents;
+}
+
+.forgot-password {
+    font-size: 10px;
+}
+
+.rectangle {
+    font-size: 14px;
+}
+
+.message, .error-message {
+    font-size: 12px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+}
+
+
+  /* Dashboard CSS */
+
+  .box {
+    height: 83px;
+    width: 217.6px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 21px 0 rgba(173, 182, 217, 0.27);
+  }
+
+  .left-line {
+    height: 83px;
+    width: 5px;
+    background-color: #0cc9e8;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .total-projects {
+    height: 20px;
+    width: 110px;
+    color: #474D52;
+    font-family: "Nunito Sans";
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+  .count {
+    height: 54px;
+    width: 102px;
+    color: #474D52;
+    font-family: "Nunito Sans";
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 54px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+  }
+  .department-wise-to {
+    height: 27px;
+    width: 491px;
+    color: #010202;
+    font-family: "Nunito Sans";
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 27px;
+    margin: 10px;
+  }
+/* Highchart CSS */
+/* 
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+#container {
+    height: 400px;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+} */
+
+
+  /* add project css */
+  .container-add-project {
+    height: 606px;
+    width: 1268px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 7px 18px 0 rgba(2,118,179,0.13);
+  }
+  .input-theme{
+    min-height: calc(4em + 1rem + calc(var(--bs-border-width)* 2)) !important;
+    padding: 0.5rem 1rem;
+    font-size: 1rem !important;
+    border-radius: var(--bs-border-radius-lg);
+    
+  }
+  .save-project {
+    height: 36px;
+    width: 153px;
+    border-radius: 18px;
+    background-color: #025AAB;
+    border: none;
+    color: #FFFFFF;
+    font-family: "Nunito Sans";
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 22px;
+  }
+  .select-input{
+    box-sizing: border-box;
+    height: 48px;
+    width: 337px;
+    border: 1px solid #979797;
+    border-radius: 6px;
+    appearance: auto !important;
+    min-height: calc(2.5em + 1rem + calc(var(--bs-border-width)* 2)) !important;
+  }
+  .date-picker{
+    width: 337px !important;
+    height: 56px !important;
+    margin-left: 10px;
+  }
+
+  /* Project List CSS */
+
+  .main-table{
+      height: 595px;
+      width: 1276px;
+      border-radius: 10px;
+      background-color: #FFFFFF;
+      box-shadow: 0 7px 18px 0 rgba(2,118,179,0.13);
+      margin-top: 11px;
+  }
+  
+    .start {
+      /* height: 19px;
+      width: 32px; */
+      color: #FFFFFF !important;
+      font-family: "Nunito Sans" !important;
+      font-size: 14px !important;
+      letter-spacing: 0 !important;
+      line-height: 19px !important;
+      text-align: center !important; 
+      border-radius: 18px !important;
+      background-color: #025AAB !important;
+      margin-right:15px ;
+    width: 85px;
+  }
+  .close-btn{
+    box-sizing: border-box !important;
+  height: 35px !important;
+  width: 80px !important;
+  border: 1px solid #025AAB !important;
+  border-radius: 18px !important;
+  margin-right:15px ;
+  }
