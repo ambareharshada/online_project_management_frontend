@@ -70,7 +70,7 @@ const LeftNav = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/add-project" className="nav-link p-0">
+            <NavLink to="/add-project" className="nav-link p-0" >
               <img
                 src={require("../assets/create-project-active.svg").default}
                 alt="Create Project"
@@ -78,6 +78,7 @@ const LeftNav = () => {
             </NavLink>
           </li>
         </ul>
+       
       </div>
     </>
   );

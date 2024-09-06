@@ -18,8 +18,7 @@ const Dashboard = () => {
       text: "",
     },
     xAxis: {
-      // categories: ["STR", "FIN", "QLT", "MAN", "STO", "HR"],
-      categories:chartData.categories,
+      categories: chartData.categories,
       crosshair: true,
       accessibility: {
         description: "Countries",
@@ -46,7 +45,6 @@ const Dashboard = () => {
       pointFormat: "{series.name}: {point.y}<br/>",
     },
     series: chartData.series,
-    
   };
 
   useEffect(() => {
@@ -99,15 +97,7 @@ const Dashboard = () => {
     <>
       <HeaderImage displayName="Dashboard" />
       <div className="container-dashboard">
-        <div
-          class="container mt-3"
-          style={{
-            padding: "0",
-            marginLeft: "5px",
-            marginRight: "5px",
-            maxWidth: "1230px",
-          }}
-        >
+        <div class="container mt-3">
           <div class="row">
             <div class="col">
               <div class="d-flex align-items-center">
@@ -140,7 +130,7 @@ const Dashboard = () => {
             </div>
 
             <div class="col">
-              <div class="d-flex align-items-center">
+              <div class="d-inline-flex align-items-center ">
                 <div class="left-line"></div>
                 <div class="box ">
                   <h3 className="total-projects">Closure Delay</h3>
@@ -164,7 +154,10 @@ const Dashboard = () => {
             Department wise - Total Vs Closed
           </h2>
 
-          <div style={{ width: "50%", marginTop: "3rem" }}>
+          <div
+            className="highchart-style"
+            // style={{ width: "50%", marginTop: "3rem" }}
+          >
             <HighchartsReact highcharts={Highcharts} options={options} />
           </div>
         </div>

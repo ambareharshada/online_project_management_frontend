@@ -5,6 +5,7 @@ import HeaderImage from "../headerImage";
 import "./login.css";
 
 const AddProject = () => {
+  let startDate, endDate;
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
@@ -29,6 +30,12 @@ const AddProject = () => {
       newErrors.projectName = "Project Theme required";
     }
 
+    console.log(formData.endDate, formData.startDate);
+
+    if (formData.endDate <= formData.startDate) {
+      newErrors.endDate = "End date must be greater than the start date.";
+    }
+
     setErrors(newErrors);
 
     // Return true if no errors
@@ -37,8 +44,6 @@ const AddProject = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
-
     setFormData({ ...formData, [name]: value });
   };
 
@@ -111,7 +116,7 @@ const AddProject = () => {
                 </div>
               </div>
             </div>
-            <div class="col-sm-2 align-content-center">
+            <div class="col-sm-2 align-content-center web-save-button">
               <button className="save-project">Save Project</button>
             </div>
           </div>
@@ -224,7 +229,7 @@ const AddProject = () => {
                 <option value="Quality">Quality</option>
                 <option value="Maintenance">Maintenance</option>
                 <option value="Stores">Stores</option>
-                <option value="Stores">HR</option>
+                <option value="HR">HR</option>
               </select>
             </div>
           </div>
@@ -258,6 +263,9 @@ const AddProject = () => {
                 onChange={handleInputChange}
                 placeholder="D Month Yr"
               />{" "}
+              {errors.endDate && (
+                <div className="text-danger ml-3">{errors.endDate}</div>
+              )}
             </div>
             <div class="col-6 col-md-3 mx-3 mt-4">
               <label className="mx-3">Location</label>
@@ -279,16 +287,21 @@ const AddProject = () => {
           </div>
 
           <div class="row">
-            <div class="col-6 col-md-3 mx-3 ">
-              
-            </div>
-            <div class="col-6 col-md-3 mx-3 ">
-            
-            </div>
+            <div class="col-6 col-md-3 mx-3 "></div>
+            <div class="col-6 col-md-3 mx-3 "></div>
             <div class="col-6 col-md-3 mx-3 my-4">
-            <label className="mx-1">Status</label>
-            <label className="mx-3 "><strong>Registered</strong></label>
+              <label className="mx-1">Status</label>
+              <label className="mx-3 ">
+                <strong>Registered</strong>
+              </label>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-md-3 mx-3 my-4 mobile-save-button">
+              <button className="save-project">Save Project</button>
+            </div>
+            <div class="col-6 col-md-3 mx-3 "></div>
+            <div class="col-6 col-md-3 mx-3 my-4"></div>
           </div>
         </div>
       </form>

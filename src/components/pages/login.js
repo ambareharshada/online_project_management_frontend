@@ -89,10 +89,7 @@ const Login = () => {
             <div className="col-12 col-md-8 col-lg-6 col-xl-5">
               <div className="card shadow-2-strong login-box">
                 <div className="card-body">
-                  <h5
-                    className="login-to-get-started-copy"
-                    // style={{ margin: "0 auto" }}
-                  >
+                  <h5 className="login-to-get-started-copy">
                     Login to get started
                   </h5>
                   <form onSubmit={handleLogin}>
