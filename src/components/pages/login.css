@@ -224,7 +224,7 @@
   
 /* Responsive Adjustments */
 @media (max-width: 576px) {
-  .container-add-project{
+  /* .container-add-project{
     height: auto;
     width: auto;
   }
@@ -235,9 +235,7 @@
     background-color: transparent;
     border: none;
   }
-  .card-body{
-    /* padding: 0; */
-  }
+
   .login-box {
       box-shadow: none;
       background-color: transparent;
@@ -269,6 +267,203 @@
 
   .form-group {
       margin-bottom: 20px;
+  } */
+  .container-dashboard .container{
+    margin-top:0px !important
+  }
+    .bg-dashboard{
+      height: 55px;
+    width: 360px;
+    border-radius: 0 0 0 35px;
+    background: linear-gradient(274.88deg, #0474DA 0%, #044E92 100%)
+    }
+    .logout-mobile{
+      display: flex;
+      margin-left: auto;
+    }
+    .highchart-style{
+      height: 424px;
+      width: 328px;
+      border-radius: 10px;
+      background-color: #FFFFFF;
+      box-shadow: 0 7px 18px 0 rgba(2,118,179,0.13);
+    }
+    /* Add Project CSS */
+    .mobile-save-button{
+      display: flex;
+    }
+    .web-save-button{
+      display:none;
+    }
+    .mobile-save-button .save-project{
+      position: absolute;
+      bottom: 15px;
+      margin-left: 20px;
+      z-index: 999;
+      width: 300px;
+    }
+    .container-add-project{
+      height: auto !important;
+      width: auto !important;
+    }
+    .container-add-project .form-control{
+      width: 350px;
+    }
+    .card{
+      background-color: transparent;
+      border: none !important;
+    }
+  
+    /* login CSS */
+   .login{
+      width: auto;
+      
+  }
+    .login-box {
+      box-shadow: none;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+  }
+  
+  .login-to-get-started-copy {
+      font-size: 28px;
+      color: #3F3F3F;
+    font-family: "Nunito Sans";
+    /* font-size: 20px; */
+    letter-spacing: 0;
+    line-height: 27px;
+    display: contents;
+  }
+  
+  .forgot-password {
+      font-size: 10px;
+  }
+  
+  .rectangle {
+      font-size: 14px;
+  }
+  
+  .message, .error-message {
+      font-size: 12px;
+  }
+  
+  .form-group {
+      margin-bottom: 20px;
+  }
+  /* listing page */
+  /* project listing page - mobile view css */
+  .main-table{
+    display: none;
+  }
+  .mobile-view{
+    display: block;
+  }
+   .project-card {
+    height: 257px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 7px 18px 0 rgba(2, 118, 179, 0.13);
+    overflow: hidden; /* Ensure content stays within the card */
+    padding: 10px 15px;
+    margin: 0 auto;
+  }
+  .mobile-view .search-control{
+  float: left !important;
+  width: 100% !important;
+  }
+  .mobile-view .search-panel{
+    float: left !important;
+  width: 70% !important;
+  }
+  .mobile-view .search-control .select-control{
+    width: 25px !important;
+    float: left;
+  }
+  .mobile-view .icon-controller{
+    float: right !important;
+  }
+  .mobile-view .main-icon{
+    position: absolute !important;
+      z-index: 999 !important;
+      margin-left: 7px !important;
+  }
+  .mobile-view .first{
+    height: 170px;
+  }
+  .mobile-view .card-title{
+    height: 22px;
+    width: 180px;
+    color: #414950;
+    font-family: "Nunito Sans";
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.44px;
+    line-height: 22px;
+    
+  }
+  .mobile-view .status{
+    height: 19px;
+    width: 76px;
+    color: #00284C;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 19px;
+    text-align: right;
+  }
+  .mobile-view .listing-date{
+    height: 19px;
+    width: 250px;
+    color: #6B6B6B;
+    font-family: "Nunito Sans";
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 19px;
+    margin-bottom: 5px;
+  }
+  .mobile-view .listing-details{
+    height: 19px;
+    width: 350px;
+    color: #3F3F3F;
+    font-family: "Nunito Sans";
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 1.5rem;
+  }
+  
+  .mobile-view .status-button{
+    height: 36px;
+    width: 88px;
+    border-radius: 18px;
+    background-color: #025AAB;
+    /* height: 22px;
+    width: 36px; */
+    color: #FFFFFF;
+    font-family: "Nunito Sans";
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 22px;
+    text-align: center;
+    border: none;
+  }
+  .mobile-view .status-button-another{
+    box-sizing: border-box;
+    height: 36px;
+    width: 88px;
+    border: 1px solid #025AAB;
+    border-radius: 18px;
+    /* height: 22px;
+    width: 40px; */
+    color: #025AAB;
+    background-color: white;
+    font-family: "Nunito Sans";
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 22px;
+    text-align: center;
   }
 }
 
@@ -374,6 +569,26 @@
   overflow: hidden; /* Ensure content stays within the card */
   padding: 10px 15px;
   margin: 0 auto;
+}
+.mobile-view .search-control{
+float: left !important;
+width: 100% !important;
+}
+.mobile-view .search-panel{
+  float: left !important;
+width: 70% !important;
+}
+.mobile-view .search-control .select-control{
+  width: 25px !important;
+  float: left;
+}
+.mobile-view .icon-controller{
+  float: right !important;
+}
+.mobile-view .main-icon{
+  position: absolute !important;
+    z-index: 999 !important;
+    margin-left: 7px !important;
 }
 .mobile-view .first{
   height: 170px;

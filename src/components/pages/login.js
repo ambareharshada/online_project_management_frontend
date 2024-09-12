@@ -57,14 +57,15 @@ const Login = () => {
       email: email,
       password: password,
     };
-
+    // const response = {};
     try {
       const response = await axios.post(
         "http://localhost:5004/api/user/login",
         payload
       );
       if (response.data.Success === true) {
-        setMessage("Valid Credentials");
+        // setMessage("Valid Credentials");
+        setMessage(response.data.message);
         localStorage.setItem("token", response.data.token);
         if (!response.data.token) {
           navigate("/");
@@ -72,11 +73,19 @@ const Login = () => {
           navigate("/dashboard");
         }
       } else {
-        setMessage("Invalid Credentials");
+        // setMessage("Invalid Credentials");
+        setMessage(response.data.message);
       }
     } catch (error) {
       console.error("There was an error!", error.message);
-      setMessage("Invalid Credentials");
+      // setMessage("Invalid Credentials");
+      // setMessage(response.data.message);
+      if (error.response) {
+        setMessage(error.response.data.message || 'An error occurred.'); 
+      } else {
+        setMessage('Network error.');
+      }
+      
     }
   };
 

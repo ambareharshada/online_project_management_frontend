@@ -5,7 +5,7 @@ import HeaderImage from "../headerImage";
 import "./login.css";
 
 const AddProject = () => {
-  let startDate, endDate;
+  // let startDate, endDate;
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
@@ -30,8 +30,6 @@ const AddProject = () => {
       newErrors.projectName = "Project Theme required";
     }
 
-    console.log(formData.endDate, formData.startDate);
-
     if (formData.endDate <= formData.startDate) {
       newErrors.endDate = "End date must be greater than the start date.";
     }
@@ -52,7 +50,6 @@ const AddProject = () => {
 
     // Validate the form
     if (validateForm()) {
-      console.log("Form Data:", formData);
       let finalData = {
         projectName: formData.projectName,
         reason: formData.reason ? formData.reason : "Business",
@@ -66,7 +63,6 @@ const AddProject = () => {
         location: formData.location ? formData.location : "Pune",
         status: "Registered",
       };
-      // console.log("final", finalData);
 
       // Perform your form submission logic here, such as making an API call
       try {
@@ -91,7 +87,6 @@ const AddProject = () => {
   return (
     <>
       <HeaderImage displayName="Create Project" />
-      {/* <div className="container-add-project"></div> */}
       <form onSubmit={handleFormSubmission}>
         <div className="container-add-project">
           {/* first row for project theme and save button */}

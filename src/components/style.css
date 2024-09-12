@@ -1,0 +1,256 @@
+/* LeftNav.css */
+.nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s;
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  .nav-link:hover {
+    background-color: #f8f9fa; /* Light grey on hover */
+    border-radius: 5px;
+  }
+  .left-nav{
+    background-color: #FFFFFF !important;
+  }
+
+  /* header image css */
+  .login-header .heading{
+    color: #FFFFFF;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-weight: 300;
+  }
+  .logo{
+    height: 76px;
+    width: 85px;
+  }
+  .header-image{
+    background-image: url("../assets/Header-bg.svg") !important;
+    background-repeat: no-repeat;
+    background-position: cover;
+  }
+  .header-name{
+    height: 30px;
+    color: #FFFFFF;
+    font-family: "Nunito Sans";
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 30px;
+  }
+  .header-logo{
+      height: 53px;
+      width: 60px;
+      margin-top: 10px;
+      margin-left: 39%;
+  }
+  
+  .container-dashboard{
+    padding-bottom: 60px;
+  }
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .login-section{
+    margin-top: 110px;
+  }
+  .bg-home{
+    background-image: url("../assets/login-mobile-bg.svg");
+    background-size: contain;
+  }
+  .header-logo{
+   display: none;
+}
+.container-fluid {
+  width:100%;
+  color: #FFFFFF;
+  font-family: "Nunito Sans";
+  font-size: 26px;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.login-header .heading{
+  font-size: 20px;
+  line-height: 22px;
+    margin-top: 2.5rem;
+}
+
+.left-nav{
+  display: none;
+  visibility: hidden;
+  /* flex-direction: row; */
+}
+.box{
+  width: 90px;
+  height: 70px;
+}
+
+.total-projects{
+  font-size: 13px !important;
+  margin-left: 5px !important;
+}
+.container-fluid .header-name{
+  font-size: 17px;
+  line-height: 1px !important;
+  margin-top: 1px !important;
+}
+.department-wise-to{
+  font-size: 18px;
+  width: 300px;
+}
+.container-dashboard .row{
+ padding-right: 0px;
+ width: 360px;
+ display: inline-flex;
+ padding-bottom: 10px;
+}
+.container-dashboard .col{
+  padding-right: 0px;
+}
+.container-dashboard .box{
+  width:90px !important;
+  height: 70px !important;
+}
+.container-dashboard .count{
+  font-size: 25px;
+  line-height: 35px;
+  height: 25px;
+  margin-left: 5px;
+}
+.container-dashboard .left-line{
+  height: 70px;
+}
+
+}
+@media (max-width: 768px) {  
+  .total-projects{
+    font-size: 13px !important;
+    margin-left: 5px !important;
+  }
+  .container-fluid .header-name{
+    font-size: 17px;
+    line-height: 1px !important;
+    margin-top: 1px !important;
+  }
+  .department-wise-to{
+    font-size: 18px;
+    width: 300px;
+  }
+  .container-dashboard .row{
+   padding-right: 0px;
+   width: 360px;
+   display: inline-flex;
+   padding-bottom: 10px;
+  }
+  .container-dashboard .col{
+    padding-right: 0px;
+  }
+  .container-dashboard .box{
+    width:90px !important;
+    height: 70px !important;
+  }
+  .container-dashboard .count{
+    font-size: 25px;
+    line-height: 35px;
+    height: 25px;
+    margin-left: 5px;
+  }
+  .container-dashboard .left-line{
+    height: 70px;
+  }
+
+.left-nav{
+  display: none;
+  visibility: hidden;
+  /* flex-direction: row; */
+}
+.login-section{
+  margin-top: 110px;
+}
+}
+
+
+/* Bottom Navigation Styles */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #ffffff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  display: -webkit-inline-box;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  overflow: hidden;
+  /* position: sticky; */
+}
+
+.bottom-nav ul {
+  display: flex;
+  justify-content: space-evenly !important;
+  width: 50%;
+  padding: 0;
+  margin: 0px auto;
+  list-style: none;
+}
+
+.bottom-nav .nav-item {
+  flex: 1;
+  text-align: center;
+}
+
+.bottom-nav .nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.bottom-nav img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Media Query for Responsive Design */
+@media (min-width: 768px) {
+  .bottom-nav {
+      display: none;
+  }
+}
+
+/* Adjust styles for larger screens or when sidebar is active */
+@media (min-width: 769px) {
+  .bottom-nav {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 68px;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: #ffffff;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .bottom-nav ul {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 145px;
+  }
+
+  .bottom-nav .nav-item {
+      margin-bottom: 20px;
+  }
+}

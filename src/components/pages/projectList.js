@@ -229,75 +229,39 @@ const ProjectList = () => {
 
       {/* Mobile view project listing page code starts here */}
       <div className="mobile-view">
-        <div className="filters mb-3">
+        <div className="filters mb-3 search-control">
           <input
             type="text"
-            className="form-control"
-            placeholder="Search by project name..."
+            className="form-control search-panel"
+            placeholder="Search..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           {/* Sort Button with Dropdown */}
-          <div className="dropdown-menu.show mt-2">
-            <button
-              className="btn btn-light d-flex align-items-center"
-              onClick={() => setShowSortDropdown(!showSortDropdown)}
-            >
-              <i className="bi bi-sort-down mr-2 "></i> Sort
-            </button>
-            {showSortDropdown && (
-              <ul className="dropdown-menu show">
-                <li
-                  className="dropdown-item"
-                  onClick={() => handleSortOptionClick("priority")}
-                >
-                  Sort by Priority
-                </li>
-                <li
-                  className="dropdown-item"
-                  onClick={() => handleSortOptionClick("recentlyModified")}
-                >
+          <div className="icon-controller ">
+            <div className="d-flex align-items-center ">
+              <i className="bi bi-sort-down mr-2 main-icon"></i>
+              <select
+                className="form-control select-control"
+                value={sortOption}
+                onChange={(e) => setSortOption(e.target.value)}
+              >
+                <option value="priority">Sort by Priority</option>
+                <option value="recentlyModified">
                   Sort by Recently Modified
-                </li>
-                <li
-                  className="dropdown-item"
-                  onClick={() => handleSortOptionClick("startDate")}
-                >
-                  Sort by Start Date
-                </li>
-                <li
-                  className="dropdown-item"
-                  onClick={() => handleSortOptionClick("endDate")}
-                >
-                  Sort by End Date
-                </li>
-                <li
-                  className="dropdown-item"
-                  onClick={() => handleSortOptionClick("status")}
-                >
-                  Sort by Status
-                </li>
-              </ul>
-            )}
+                </option>
+                <option value="startDate">Sort by Start Date</option>
+                <option value="endDate">Sort by End Date</option>
+                <option value="status">Sort by Status</option>
+              </select>
+            </div>
           </div>
-          {/* <i class="bi bi-sort-down"></i>
-          <select
-            className="form-control mt-2"
-            value={sortOption}
-            onChange={(e) => setSortOption(e.target.value)}
-          >
-            <option value="priority">Sort by Priority</option>
-            <option value="recentlyModified">Sort by Recently Modified</option>
-            <option value="startDate">Sort by Start Date</option>
-            <option value="endDate">Sort by End Date</option>
-            <option value="status">Sort by Status</option>
-          </select> */}
         </div>
       </div>
       {sortedProjects.map((element) => {
         return (
           <>
-            <div class="project-card mobile-view">
+            <div class="project-card mobile-view mb-2">
               <div class="card-body first">
                 <div class="d-flex justify-content-between">
                   <h5 class="card-title">{element.projectName}</h5>
@@ -369,6 +333,7 @@ const ProjectList = () => {
                 </div>
               </div>
             </div>
+            <div className="mb-2"></div>
           </>
         );
       })}

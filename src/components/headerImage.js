@@ -1,4 +1,4 @@
-import "./LeftNav.css";
+import "./style.css";
 import { NavLink } from "react-router-dom";
 
 const HeaderImage = ({ displayName, displayImage }) => {

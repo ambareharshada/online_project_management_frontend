@@ -58,7 +58,6 @@ const Dashboard = () => {
             headers: { authorization: token },
           }
         );
-        // console.log(response);
 
         setResponseData(response.data);
         setMessage(response.data.message);
@@ -84,7 +83,6 @@ const Dashboard = () => {
         console.log(response);
 
         setChartData(response.data);
-        // setMessage(response.data.message);
       } catch (error) {
         setMessage("Access denied. Please log in.");
       }
@@ -154,10 +152,7 @@ const Dashboard = () => {
             Department wise - Total Vs Closed
           </h2>
 
-          <div
-            className="highchart-style"
-            // style={{ width: "50%", marginTop: "3rem" }}
-          >
+          <div className="highchart-style">
             <HighchartsReact highcharts={Highcharts} options={options} />
           </div>
         </div>
